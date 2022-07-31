@@ -4,13 +4,10 @@ import random
 
 pygame.init()
 
-dark_green = (0, 110, 127)
 white = (255,255,255)
 yellow = (248, 203, 46)
-purple = (46, 10,150)
-black = (91, 179, 24)
-green = (0, 255, 0)
-blue = (61, 44, 141)
+green = (91, 179, 24)
+purple = (61, 44, 141)
 red = (178, 39, 39)
 
 dis_width = 800
@@ -31,7 +28,7 @@ def your_score(score):
 
 def our_snake(snake_block, snake_list):
     for x in snake_list:
-        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
+        pygame.draw.rect(dis, green, [x[0], x[1], snake_block, snake_block])
 
 def message(msg, color):
     mesg = font_style.render(msg, True, color)
@@ -94,7 +91,7 @@ def gameLoop():
 
         x1 += x1_change
         y1 += y1_change
-        dis.fill(blue)
+        dis.fill(purple)
         pygame.draw.rect(dis, yellow, [foodx,foody,snake_block,snake_block])
         snake_Head = []
         snake_Head.append(x1)
