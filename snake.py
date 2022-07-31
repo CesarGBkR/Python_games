@@ -38,8 +38,8 @@ def gameLoop():
     game_over = False
     game_close = False
     
-    x1 = dis_width/2
-    y1 = dis_height/2
+    x1 = dis_width//2
+    y1 = dis_height//2
 
     x1_change = 0
     y1_change = 0
@@ -48,8 +48,8 @@ def gameLoop():
     length_of_snake = 1
     snake_speed = 15
 
-    foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
-    foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+    foodx = (random.randrange(0, dis_width - snake_block) // 10.0) * 10.0
+    foody = (random.randrange(0, dis_height - snake_block) // 10.0) * 10.0
 
     while not game_over:
         
@@ -110,8 +110,8 @@ def gameLoop():
         pygame.display.update()
 
         if x1 == foodx and y1 == foody:
-            foodx = round(random.randrange(0, dis_width -snake_block) / 10.0) *10.0
-            foody = round(random.randrange(0, dis_height -snake_block) / 10.0) *10.0
+            foodx = (random.randrange(0, dis_width -snake_block) // 10.0) *10.0
+            foody = (random.randrange(0, dis_height -snake_block) // 10.0) *10.0
             length_of_snake += 1
             snake_speed += .3
 
